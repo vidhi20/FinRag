@@ -204,12 +204,6 @@ This application requires API keys for:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 🎯 Motivation
-
-This project was developed to address the significant challenge organizations face when trying to quickly extract relevant information from large financial documents. Instead of manually sifting through hundreds of pages of 10-K reports, earnings calls, and financial statements, this tool enables users to find precise answers through natural language queries.
-
-The system was created as part of the CS 6120: Natural Language Processing course, applying advanced NLP techniques to solve real-world information retrieval problems in the financial domain.
-
 ## 📧 Contact
 
 For questions or support, please open an issue in the GitHub repository or contact Vidhi Parekh - [LinkedIn](https://www.linkedin.com/in/vidhi-parekh/)
