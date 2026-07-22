@@ -1248,12 +1248,12 @@ import yfinance as yf
 import pandas as pd
 from difflib import SequenceMatcher
 from datetime import datetime
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.retrievers import BM25Retriever
-from langchain.schema import Document
-from langchain.retrievers import EnsembleRetriever
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_community.retrievers import BM25Retriever
+from langchain_core.documents import Document
+from langchain_classic.retrievers import EnsembleRetriever
 import tempfile
 import os
 import google.generativeai as genai

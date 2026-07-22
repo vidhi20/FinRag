@@ -959,15 +959,15 @@ import threading
 import yfinance as yf
 import pandas as pd
 from fuzzywuzzy import process
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import FAISS as LangchainFAISS
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.document_loaders import PyPDFLoader
-from langchain.chains import RetrievalQA
-from langchain.schema import Document
-from langchain.retrievers import BM25Retriever
-from langchain.retrievers import EnsembleRetriever
-from langchain.llms.base import LLM
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import FAISS as LangchainFAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_classic.chains import RetrievalQA
+from langchain_core.documents import Document
+from langchain_community.retrievers import BM25Retriever
+from langchain_classic.retrievers import EnsembleRetriever
+from langchain_core.language_models.llms import LLM
 from typing import Any, List, Mapping, Optional
 import tempfile
 import os
@@ -982,11 +982,12 @@ import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
 # LangChain imports
-from langchain.text_splitter import RecursiveCharacterTextSplitter, CharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.schema import Document
-from langchain.retrievers import BM25Retriever, EnsembleRetriever
+from langchain_text_splitters import RecursiveCharacterTextSplitter, CharacterTextSplitter
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import FAISS
+from langchain_core.documents import Document
+from langchain_community.retrievers import BM25Retriever
+from langchain_classic.retrievers import EnsembleRetriever
 
 # Download nltk resources (run once, only if not already present)
 for resource in ('tokenizers/punkt', 'tokenizers/punkt_tab'):
@@ -2157,12 +2158,12 @@ def format_date(timestamp):
         return str(timestamp)
 
 # Import Langchain components
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.vectorstores import FAISS as LangchainFAISS
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.schema import Document as LangchainDocument
-from langchain.retrievers import BM25Retriever
-from langchain.retrievers import EnsembleRetriever
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import FAISS as LangchainFAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_core.documents import Document as LangchainDocument
+from langchain_community.retrievers import BM25Retriever
+from langchain_classic.retrievers import EnsembleRetriever
 
 def langchain_process_file(uploaded_file, company_name, embedding_model_name='all-mpnet-base-v2', chunking_strategy='semantic', chunk_size=1000):
     """
